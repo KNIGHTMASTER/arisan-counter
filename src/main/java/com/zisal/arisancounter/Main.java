@@ -14,6 +14,7 @@ import java.util.Date;
 public class Main {
 
     public static void main(String args []) {
+        String arisanName = JOptionPane.showInputDialog(null, "Please input name of Arisan : ");
         SimpleDateFormat inputFormat = new SimpleDateFormat("dd-MM-yyyy");
         int nPlayer = Integer.parseInt(JOptionPane.showInputDialog(null, "Please Input Number of Player"));
         String startTime = JOptionPane.showInputDialog(null, "Please Input Date Start");
@@ -28,6 +29,7 @@ public class Main {
         int earnSingle = (nPlayer * nContribution);
         int earnAll = Integer.parseInt(JOptionPane.showInputDialog(null, "Please Input Number of Your Player"));
         Date finishedTime = addNWeeksToDate(nPlayer, dateStart);
+        System.out.println("Arisan : " + arisanName);
         System.out.println("Finished Time : " + inputFormat.format(finishedTime));
         System.out.println("Earn :" + earnSingle);
         System.out.println("Earn All :" + (earnSingle * earnAll));
